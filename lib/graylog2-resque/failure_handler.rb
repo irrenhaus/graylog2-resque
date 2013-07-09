@@ -60,7 +60,7 @@ module Graylog2
         end
       end
 
-      def self.count
+      def self.count(queue = nil, class_name = nil)
         # We can't get the total # of errors from graylog so we fake it
         # by asking Resque how many errors it has seen.
         ::Resque::Stat[:failed]
