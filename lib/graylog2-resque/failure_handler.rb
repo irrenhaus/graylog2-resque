@@ -30,7 +30,7 @@ module Graylog2
       def self.configure
         yield self
         raise "Graylog server and port needed for resque failure handler" unless gelf_server && gelf_port
-        ::Resque::Failure.backend = self
+        # ::Resque::Failure.backend = self
       end
 
       def save
